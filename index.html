@@ -1,0 +1,55 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Alvoar Lácteos - Controle de Conferência</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#007bff">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+</head>
+<body>
+    <div id="app-container">
+        <header id="app-header">
+            <img src="logo-azul.png" alt="Logo Alvoar Lácteos" id="header-logo">
+            <h1 id="company-name">Alvoar Lácteos - Conferência</h1>
+        </header>
+
+        <main id="app-main">
+            <section id="register-view" class="view">
+                <h2>Registrar Novo Problema</h2>
+                <form id="register-issue-form">
+                    <label for="ficha-code">Código da Ficha:</label>
+                    <input type="text" id="ficha-code" placeholder="Ex: F12345" required>
+                    
+                    <label for="issue-description">Descrição do Problema:</label>
+                    <textarea id="issue-description" placeholder="Descreva o problema encontrado..." rows="5" required></textarea>
+                    
+                    <button type="submit">Registrar Problema</button>
+                </form>
+            </section>
+
+            <section id="issues-view" class="view active-view">
+                <h2>Problemas Registrados</h2>
+                <div id="issues-list-container">
+                    <!-- Issues will be dynamically inserted here by JavaScript -->
+                    <p class="no-issues-message">Nenhum problema registrado ainda.</p>
+                </div>
+            </section>
+        </main>
+
+        <nav id="app-nav">
+            <button data-view="issues-view" class="nav-button active">
+                <img src="icons/view-issues-icon.png" alt="Ver Problemas" class="nav-icon">
+                <span>Problemas</span>
+            </button>
+            <button data-view="register-view" class="nav-button">
+                <img src="icons/add-issue-icon.png" alt="Registrar Problema" class="nav-icon">
+                <span>Registrar</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
